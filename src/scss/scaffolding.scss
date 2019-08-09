@@ -1,0 +1,12 @@
+body {
+	@include font($main-font-family, $main-font-size, normal, $main-line-height, $main-color-text);
+
+	margin    : 0;
+
+	background: $main-color-background;
+}
+
+.main-wrapper {
+	margin: 0 auto;
+	width : $main-unit;
+}

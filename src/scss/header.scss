@@ -1,0 +1,13 @@
+.header {
+	@include flex(row, space-between);
+
+	position: relative;
+
+	margin  : 0 auto;
+	width   : $main-unit;
+}
+
+.header__item {
+	margin-top   : 50-22px;
+	margin-bottom: 58-22px;
+}

@@ -1,0 +1,36 @@
+// sizes and indents
+$main-unit: 870px;
+
+// fonts
+$main-font-family                    : "Segoe UI", "Arial", sans-serif;
+$main-font-size                      : 15px;
+$main-line-height                    : 1;
+
+$accent-font-family                  : "Poppins", "Arial", sans-serif;
+$logo-font-family                    : "Baskerville Old Face", serif;
+
+$header-nav__item-font-family        : 1.333em;
+$header-nav__item-line-height        : 1.4;
+$header-nav__column-font-family      : 1.067em;
+$header-nav__column-line-height      : 1.6;
+$header-nav__submenu-item-font-family: 0.667em;
+$header-nav__submenu-item-line-height: 1;
+
+// color
+$main-color-text      : #000000;
+$main-color-background: #ffffff;
+
+//mixin
+@mixin flex($f-direction, $f-justify) {
+	display        : flex;
+	flex-direction : $f-direction;
+	justify-content: $f-justify;
+}
+
+@mixin font($f-family, $f-size, $f-weight, $f-height, $f-color) {
+	font-family: $f-family;
+	font-size  : $f-size;
+	font-weight: $f-weight;
+	line-height: $f-height;
+	color      : $f-color;
+}
