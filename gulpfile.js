@@ -24,7 +24,7 @@ const path = {
 							js:     'dev/js/',
 							img:    'dev/img/',
 							imgx:   'dev/img/x3/',
-							font:   'src/font/'
+							font:   'src/fonts/'
 						},
 						src: {
 							html: 'src/**/*.html',
@@ -33,7 +33,7 @@ const path = {
 							img: ['src/img/**/*.jpg',
 										'src/img/**/*.svg',
 										'src/img/**/*.png'],
-							font: 'src/font/**/*.*'
+							font: 'src/fonts/**/*.*'
 						},
 						watch: {
 							dev: 'src',
@@ -43,7 +43,7 @@ const path = {
 							img: ['src/img/**/*.jpg',
 										'src/img/**/*.svg',
 										'src/img/**/*.png'],
-							font: 'src/font/**/*.*'
+							font: 'src/fonts/**/*.*'
 						},
 					};
 
