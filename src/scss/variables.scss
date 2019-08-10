@@ -1,5 +1,5 @@
 // sizes and indents
-$main-unit: 870px;
+$main-unit: 1170px;
 
 // fonts
 $main-font-family                    : "Segoe UI", "Arial", sans-serif;
@@ -9,16 +9,12 @@ $main-line-height                    : 1;
 $accent-font-family                  : "Poppins", "Arial", sans-serif;
 $logo-font-family                    : "Baskerville Old Face", serif;
 
-$header-nav__item-font-family        : 1.333em;
-$header-nav__item-line-height        : 1.4;
-$header-nav__column-font-family      : 1.067em;
-$header-nav__column-line-height      : 1.6;
-$header-nav__submenu-item-font-family: 0.667em;
-$header-nav__submenu-item-line-height: 1;
 
 // color
-$main-color-text      : #000000;
-$main-color-background: #ffffff;
+$main-text-color       : #000000;
+$main-color-background : #ffffff;
+$main-slider-background: #000000;
+$active-text-color     : #ff0000;
 
 //mixin
 @mixin flex($f-direction, $f-justify) {

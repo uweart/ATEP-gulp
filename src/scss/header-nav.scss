@@ -13,8 +13,8 @@
 .main-nav__item {
 	position: relative;
 	font-family: $main-font-family;
-	font-size  : $header-nav__item-font-family;
-	line-height: $header-nav__item-line-height;
+	font-size  : $main-nav__item-font-family;
+	line-height: $main-nav__item-line-height;
 	padding: 22px;
 	margin-top: 50-22px;
 	margin-bottom: 58-22px;
@@ -37,13 +37,13 @@
 	display: flex;
 	flex-direction: column;
 	font-family: $main-font-family;
-	font-size  : $header-nav__column-font-family;
-	line-height: $header-nav__column-line-height;
+	font-size  : $main-nav__column-font-family;
+	line-height: $main-nav__column-line-height;
 
 	list-style : none;
 }
 
 .main-nav__submenu-item {
-	font-size: $header-nav__submenu-item-font-family;
-	line-height: $header-nav__submenu-item-line-height;
+	font-size: $main-nav__submenu-item-font-family;
+	line-height: $main-nav__submenu-item-line-height;
 }

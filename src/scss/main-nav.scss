@@ -1,47 +1,141 @@
-.main-nav {
+.main-nav>ul {
 	@include flex(row, space-between);
 
+	position  : relative;
+
+	margin    : 0;
 	padding   : 0;
-	width     : 631px;
+	width     : 585+44px;
 
 	list-style: none;
 }
 
-.main-nav__item {
-	@include font($main-font-family, $header-nav__item-font-family, normal, $header-nav__item-line-height, $main-color-text);
+.main-nav__link {
+	@include font($main-font-family, 1.333em, normal, 1.25, $main-text-color);
 
-	position  : relative;
+	position       : relative;
 
-	background: $main-color-background;
+	display        : block;
+
+	padding        : 21px;
+
+	text-decoration: none;
+
+	background     : $main-color-background;
+
+	&:not([href])::after {
+		position  : absolute;
+		right     : 21px;
+		bottom    : 7px;
+		left      : 21px;
+
+		height    : 1px;
+
+		content   : "";
+
+		background: $main-text-color;
+	}
+}
+
+.main-nav__item--submenu {
+	flex-grow: 1;
+	position : initial;
+
+	.main-nav__link {
+		text-align: center;
+
+		&::before,
+		&::after {
+			position  : absolute;
+			right     : 13px;
+			bottom    : 28px;
+
+			display   : block;
+
+			width     : 7px;
+			height    : 0.1em;
+
+			content   : "";
+			transform : rotate(45deg);
+
+			background: $main-text-color;
+		}
+
+		&::after {
+			right    : 8px;
+
+			transform: rotate(-45deg);
+		}
+	}
 }
 
 .main-nav__submenu {
 	@include flex(row, center);
 
-	position: absolute;
-	top     : 44+27+69-22px;
+	position   : absolute;
+	top        : 44+27+69-25px;
 
-	display : none;
+	display    : none;
+
+	padding    : 58px 117px;
+
+	background : $main-color-background;
+}
+
+.main-nav__submenu-item {
+	margin-bottom: 5px;
 }
 
 .main-nav__submenu--active {
 	@include flex(row, center);
-
-	margin-left: 50%;
-
-	transform  : translateX(-50%);
 }
 
 .main-nav__column {
 	@include flex(column, flex-start);
-	@include font($main-font-family, $header-nav__column-font-family, normal, $header-nav__column-line-height, $main-color-text);
 
-	list-style: none;
+	padding     : 0;
+	list-style  : none;
 
-	background: $main-color-background;
+	background  : $main-color-background;
+	margin-right: 23px;
+
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
-.main-nav__submenu-item {
-	font-size  : $header-nav__submenu-item-font-family;
-	line-height: $header-nav__submenu-item-line-height;
+.main-nav__submenu-link {
+	@include font($main-font-family, 0.625em, normal, 1.5, $main-text-color);
+
+	padding        : 6px 10px;
+
+	text-decoration: none;
+
+	background     : $main-color-background;
+}
+
+.main-nav__submenu-link--title {
+	@include font($accent-font-family, 1.067em, 500, 1.50, $main-text-color);
+
+	padding   : 10px;
+	position  : relative;
+	background: $main-color-background;
+
+	&:after {
+		position  : absolute;
+		content   : "";
+		right     : 10px;
+		left      : 10px;
+		bottom    : 0;
+		height    : 1px;
+		background: $main-text-color;
+	}
+}
+
+.main-nav__submenu-link--active {
+	color: $active-text-color;
+
+	&:after {
+		background: $active-text-color;
+	}
 }
