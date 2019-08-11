@@ -17,16 +17,17 @@ $main-slider-background: #000000;
 $active-text-color     : #ff0000;
 
 //mixin
-@mixin flex($f-direction, $f-justify) {
+@mixin flex($fx-direction, $fx-justify) {
 	display        : flex;
-	flex-direction : $f-direction;
-	justify-content: $f-justify;
+	flex-direction : $fx-direction;
+	justify-content: $fx-justify;
 }
 
-@mixin font($f-family, $f-size, $f-weight, $f-height, $f-color) {
+@mixin font($f-family, $f-size, $f-weight, $f-height, $f-color, $bg-color) {
 	font-family: $f-family;
 	font-size  : $f-size;
 	font-weight: $f-weight;
 	line-height: $f-height;
 	color      : $f-color;
+	background : $bg-color;
 }

@@ -11,7 +11,7 @@
 }
 
 .main-nav__link {
-	@include font($main-font-family, 1.333em, normal, 1.25, $main-text-color);
+	@include font($main-font-family, 1.333em, normal, 1.25, $main-text-color, $main-color-background);
 
 	position       : relative;
 
@@ -20,8 +20,6 @@
 	padding        : 21px;
 
 	text-decoration: none;
-
-	background     : $main-color-background;
 
 	&:not([href])::after {
 		position  : absolute;
@@ -72,18 +70,17 @@
 .main-nav__submenu {
 	@include flex(row, center);
 
-	position   : absolute;
-	top        : 44+27+69-25px;
+	position  : absolute;
+	top       : 44+27+69-25px;
 
-	display    : none;
+	display   : none;
 
-	padding    : 58px 117px;
+	padding   : 58px 117px;
 
-	background : $main-color-background;
+	background: $main-color-background;
 }
 
 .main-nav__submenu-item {
-	margin-bottom: 5px;
 }
 
 .main-nav__submenu--active {
@@ -105,23 +102,21 @@
 }
 
 .main-nav__submenu-link {
-	@include font($main-font-family, 0.625em, normal, 1.5, $main-text-color);
+	@include font($main-font-family, 0.625em, normal, 1.5, $main-text-color, $main-color-background);
 
+	display: block;
 	padding        : 6px 10px;
 
 	text-decoration: none;
-
-	background     : $main-color-background;
 }
 
 .main-nav__submenu-link--title {
-	@include font($accent-font-family, 1.067em, 500, 1.50, $main-text-color);
+	@include font($accent-font-family, 1.067em, 500, 1.50, $main-text-color, $main-color-background);
 
 	padding   : 10px;
 	position  : relative;
-	background: $main-color-background;
 
-	&:after {
+	&::after {
 		position  : absolute;
 		content   : "";
 		right     : 10px;
@@ -135,7 +130,7 @@
 .main-nav__submenu-link--active {
 	color: $active-text-color;
 
-	&:after {
+	&::after {
 		background: $active-text-color;
 	}
 }
