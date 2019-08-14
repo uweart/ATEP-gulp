@@ -1,0 +1,165 @@
+.main-nav>ul {
+	position  : relative;
+
+	@include flex(row, space-between);
+
+	margin    : 0;
+	padding   : 0;
+	width     : 585+44px;
+
+	list-style: none;
+}
+
+.main-nav__link {
+	position       : relative;
+
+	display        : block;
+
+	padding        : 13px 21px;
+
+	@include font($main-font-family, 1.333em, normal, 1.25, $main-text-color, $main-color-background);
+
+	text-decoration: none;
+
+	&:not([href])::after {
+		position  : absolute;
+		right     : 21px;
+		bottom    : 0;
+		left      : 21px;
+
+		height    : 1px;
+
+		content   : "";
+
+		background: $main-text-color;
+	}
+}
+
+.main-nav__item--submenu {
+	position : initial;
+
+	flex-grow: 1;
+
+	.main-nav__link {
+		text-align: center;
+
+		&::before,
+		&::after {
+			position  : absolute;
+			right     : 14px;
+			bottom    : 20px;
+
+			display   : block;
+
+			width     : 8px;
+			height    : 0.1em;
+
+			content   : "";
+			transform : rotate(45deg);
+
+			background: $main-text-color;
+		}
+
+		&::after {
+			right    : 9px;
+
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.main-nav__submenu-wrapper {
+	position   : absolute;
+	left       : 50%;
+	z-index    : 19;
+
+	display    : none;
+
+	padding-top: 56px;
+
+	transform  : translateX(-50%);
+
+	background : transparent;
+}
+
+.main-nav__item--submenu:hover .main-nav__submenu-wrapper {
+	display: block;
+}
+
+.main-nav__submenu {
+	z-index   : 20;
+
+	@include flex(row, center);
+
+	padding   : 49px 102px 57px;
+
+	background: $main-color-background;
+
+	&::before {
+		position  : absolute;
+		top       : 56px;
+
+		content   : "";
+		transform : translateX(-50%);
+
+		border    : 12px solid transparent;
+		border-top: 12px solid $main-slider-background;
+	}
+}
+
+.main-nav__column {
+	@include flex(column, flex-start);
+
+	margin-right: 23px;
+	padding     : 0;
+
+	list-style  : none;
+
+	background  : $main-color-background;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.main-nav__submenu-link {
+	display        : block;
+
+	margin-bottom  : 1px;
+	padding        : 3px 10px;
+
+	@include font($main-font-family, 0.675em, normal, 1.5, $main-text-color, $main-color-background);
+
+	text-decoration: none;
+	letter-spacing : 1px;
+
+	&:hover {
+		color: $active-text-color;
+	}
+}
+
+.main-nav__submenu-link--title {
+	position     : relative;
+
+	margin-bottom: 7px;
+	padding      : 9px;
+
+	@include font($accent-font-family, 1.067em, 500, 1.50, $main-text-color, $main-color-background);
+
+	&::after {
+		position  : absolute;
+		right     : 10px;
+		bottom    : 0;
+		left      : 10px;
+
+		height    : 0.9px;
+
+		content   : "";
+
+		background: $main-text-color;
+	}
+}
+
+.main-nav__column:hover .main-nav__submenu-link--title {
+	color: $active-text-color;
+}

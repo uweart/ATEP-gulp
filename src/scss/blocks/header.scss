@@ -1,0 +1,49 @@
+.header {
+	position: relative;
+
+	@include flex(row, center);
+
+	margin  : 0 auto;
+	width   : $main-unit;
+
+	align-items: baseline;
+}
+
+.header__item {
+	margin   : 50-17px 0 50-5px;
+	min-width: 250px;
+}
+
+.header__item--logo {
+	margin-right: auto;
+
+	transform: translate(-86px, 12px);
+}
+
+.header__item--logo .logo {
+	position   : relative;
+
+	// margin-left: -84px;
+
+	&::after {
+		position     : absolute;
+		bottom       : 14.5px;
+		left         : 111px;
+
+		display      : block;
+
+		width        : 8px;
+		height       : 8px;
+
+		content      : "";
+
+		border-radius: 50%;
+		background   : #ff0000;
+	}
+}
+
+.header__item--user-menu {
+	margin-left: auto;
+
+	transform: translate(-7px, 1px);
+}

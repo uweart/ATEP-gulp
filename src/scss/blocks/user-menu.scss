@@ -1,0 +1,49 @@
+.user-menu {
+	@include flex(row, flex-end);
+
+	padding-left: 0;
+	width       : 192px;
+
+	list-style  : none;
+}
+
+.user-menu__item {
+	padding: 12px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.user-menu__item--like {
+	transform: translate(-2px, 1px);
+}
+
+.user-menu__item--search {
+	transform: translate(2px, 2px);
+}
+
+.user-menu__item--cart {
+	position: relative;
+}
+
+.user-menu__number-purchases {
+	position     : absolute;
+	top          : 6px;
+	right        : 8px;
+
+	@include flex(row, center);
+
+	width        : 16px;
+	height       : 16px;
+
+	@include font($accent-font-family, 0.6em, 600, 1.44, #ffffff, #000000);
+
+	border-radius: 50%;
+
+	align-items  : center;
+}
+
+.main-nav__icon {
+	display: block;
+}
