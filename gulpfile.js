@@ -36,25 +36,25 @@ const path = {
 							font: 'src/fonts/**/*.*'
 						},
 						watch: {
-							dev: 'src',
+							dev:  'src',
 							html: 'src/**/*.html',
-							css:  'src/scss/*.scss',
+							css:  'src/scss/**/*.scss',
 							js:   'src/js/*.js',
 							img: ['src/img/**/*.jpg',
 										'src/img/**/*.svg',
 										'src/img/**/*.png'],
-							font: 'src/fonts/**/*.*'
+							font: 'src/fonts/*.*'
 						},
 					};
 
 gulp.task('serv', function() {
 	bwsync.init({
 		server: {
-			baseDir: './src',
+			baseDir: './dev',
 			notify: false,
 		}
 	});
-	bwsync.watch(path.watch.dest, bwsync.reload);
+	bwsync.watch(path.watch.dev, bwsync.reload);
 });
 
 gulp.task('html', function() {
@@ -109,8 +109,8 @@ gulp.task('img', function() {
 			}),
 			imagemin.svgo({
 				plugins: [
-				{removeViewBox: true},
-				{cleanupIDs: false}
+					{removeViewBox: true},
+					{cleanupIDs: false}
 				]
 			})
 		]))
