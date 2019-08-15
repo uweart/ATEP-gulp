@@ -502,50 +502,60 @@ body {
     -webkit-transition-delay: .9s;
          -o-transition-delay: .9s;
             transition-delay: .9s; }
-  .main-nav__link:hover,
-  .main-nav__link:focus span {
+  .main-nav__link[href]:hover,
+  .main-nav__link[href]:focus span {
     font-weight: 600;
     text-shadow: 1px 1px 0px #dddddd; }
-  .main-nav__link span:nth-child(1) {
-    -webkit-transition-delay: 0s;
-         -o-transition-delay: 0s;
-            transition-delay: 0s; }
-  .main-nav__link span:nth-child(2) {
-    -webkit-transition-delay: .1s;
-         -o-transition-delay: .1s;
-            transition-delay: .1s; }
-  .main-nav__link span:nth-child(3) {
-    -webkit-transition-delay: .2s;
-         -o-transition-delay: .2s;
-            transition-delay: .2s; }
-  .main-nav__link span:nth-child(4) {
-    -webkit-transition-delay: .3s;
-         -o-transition-delay: .3s;
-            transition-delay: .3s; }
-  .main-nav__link span:nth-child(5) {
-    -webkit-transition-delay: .4s;
-         -o-transition-delay: .4s;
-            transition-delay: .4s; }
-  .main-nav__link span:nth-child(6) {
-    -webkit-transition-delay: .5s;
-         -o-transition-delay: .5s;
-            transition-delay: .5s; }
-  .main-nav__link span:nth-child(7) {
-    -webkit-transition-delay: .6s;
-         -o-transition-delay: .6s;
-            transition-delay: .6s; }
-  .main-nav__link span:nth-child(8) {
-    -webkit-transition-delay: .7s;
-         -o-transition-delay: .7s;
-            transition-delay: .7s; }
-  .main-nav__link span:nth-child(9) {
-    -webkit-transition-delay: .8s;
-         -o-transition-delay: .8s;
-            transition-delay: .8s; }
-  .main-nav__link span:nth-child(10) {
-    -webkit-transition-delay: .9s;
-         -o-transition-delay: .9s;
-            transition-delay: .9s; }
+    .main-nav__link[href]:hover:nth-child(1),
+    .main-nav__link[href]:focus span:nth-child(1) {
+      -webkit-transition-delay: 0s;
+           -o-transition-delay: 0s;
+              transition-delay: 0s; }
+    .main-nav__link[href]:hover span:nth-child(2),
+    .main-nav__link[href]:focus span span:nth-child(2) {
+      -webkit-transition-delay: .1s;
+           -o-transition-delay: .1s;
+              transition-delay: .1s; }
+    .main-nav__link[href]:hover span:nth-child(3),
+    .main-nav__link[href]:focus span span:nth-child(3) {
+      -webkit-transition-delay: .2s;
+           -o-transition-delay: .2s;
+              transition-delay: .2s; }
+    .main-nav__link[href]:hover span:nth-child(4),
+    .main-nav__link[href]:focus span span:nth-child(4) {
+      -webkit-transition-delay: .3s;
+           -o-transition-delay: .3s;
+              transition-delay: .3s; }
+    .main-nav__link[href]:hover span:nth-child(5),
+    .main-nav__link[href]:focus span span:nth-child(5) {
+      -webkit-transition-delay: .4s;
+           -o-transition-delay: .4s;
+              transition-delay: .4s; }
+    .main-nav__link[href]:hover span:nth-child(6),
+    .main-nav__link[href]:focus span span:nth-child(6) {
+      -webkit-transition-delay: .5s;
+           -o-transition-delay: .5s;
+              transition-delay: .5s; }
+    .main-nav__link[href]:hover span:nth-child(7),
+    .main-nav__link[href]:focus span span:nth-child(7) {
+      -webkit-transition-delay: .6s;
+           -o-transition-delay: .6s;
+              transition-delay: .6s; }
+    .main-nav__link[href]:hover span:nth-child(8),
+    .main-nav__link[href]:focus span span:nth-child(8) {
+      -webkit-transition-delay: .7s;
+           -o-transition-delay: .7s;
+              transition-delay: .7s; }
+    .main-nav__link[href]:hover span:nth-child(9),
+    .main-nav__link[href]:focus span span:nth-child(9) {
+      -webkit-transition-delay: .8s;
+           -o-transition-delay: .8s;
+              transition-delay: .8s; }
+    .main-nav__link[href]:hover span:nth-child(10),
+    .main-nav__link[href]:focus span span:nth-child(10) {
+      -webkit-transition-delay: .9s;
+           -o-transition-delay: .9s;
+              transition-delay: .9s; }
 
 .main-nav__item--submenu {
   position: initial;
